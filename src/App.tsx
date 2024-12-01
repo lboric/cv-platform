@@ -10,6 +10,8 @@ import { theme } from "./themes/defaultTheme";
 import { Colors } from "./colors/colors";
 import TopNavigation from "./components/structure/topNavigation";
 import Footer from "./components/structure/footer";
+import ProjectCatalogPage from "./pages/projectCatalogPage";
+import ProjectCard from "./components/content/projectCard";
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
                 size={12}
                 direction="row"
                 sx={{
+                    minHeight: '100vh',
                     backgroundColor: Colors.PEWTER_GREY
                 }}>
                 <Grid size={1}/>
@@ -29,7 +32,8 @@ function App() {
                     size={10}
                     direction="column"
                     sx={{
-                        height: '100vh'
+                        height: '100%',
+                        display: 'flex',
                     }}>
                     <Grid
                         size={12}
@@ -45,13 +49,14 @@ function App() {
                     <Grid
                         size={12}
                         sx={{
+                            padding: '2%',
                             flexGrow: 1,
                             overflow: 'auto',
                             boxSizing: 'border-box',
                             backgroundColor: Colors.WHITE
                         }}>
                         <Routes>
-                            <Route path="/" element={<div>HEHEH</div>} />
+                            <Route path="/" element={<ProjectCatalogPage projectCards={ProjectCard} />} />
                         </Routes>
                     </Grid>
                     <Grid size={12}>
