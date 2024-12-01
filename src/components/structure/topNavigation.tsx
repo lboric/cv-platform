@@ -7,7 +7,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {
     Box,
     Button,
-    Grid2 as Grid
+    Grid2 as Grid,
+    Typography
 } from "@mui/material";
 
 
@@ -57,13 +58,14 @@ const TopNavigation: FC<Props> = () => {
                                 display: 'flex',
                                 alignItems: 'center',
                             }}>
-                            <AdbIcon sx={{ mr: 1 }} />
+                            <Box display="flex" alignItems="center">
+                                <AdbIcon sx={{ fontSize: '3em', mr: 1 }} />
+                                <Typography variant="h2">Luka Borić</Typography>
+                            </Box>
                         </Grid>
+                        <Grid size={5}/>
                         <Grid
                             size={4}
-                        />
-                        <Grid
-                            size={5}
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
@@ -85,7 +87,7 @@ const TopNavigation: FC<Props> = () => {
                                         onClick={() => null}
                                         sx={{
                                             color: 'white',
-                                            fontSize: '0.5rem',
+                                            fontSize: '1.5rem',
                                             whiteSpace: 'nowrap',
                                             minWidth: 0,
                                             padding: '4px 8px',
